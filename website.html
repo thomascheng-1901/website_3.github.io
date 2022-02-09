@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{box-sizing:border-box;}
+            .column{float: left; height: 300px; padding: 10px;}
+            .row:after{content: ""; display: table; clear: both;}
+        </style>
+        <!-- for loading animation at the beginning -->
+        <link rel = "stylesheet" types = "text/css" href = "style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>       
+        <meta charset = "UTF-8">
+        <title>My Website</title>
+    </head>
+    <body style = "background-color: lightblue;">
+        <h1 style = "color: green;">Hello World</h1>
+        <hr/>
+        <p style = "color: blue; background-color: red;"><b>THIS IS A BOLD TEXT</b><i style = "color: gold;">   THIS IS AN ITALIC TEXT</i></p>
+        <span style="background-color: orange; font-size: 30px; text-align: center;">This text is highlighted.</span>
+            <div class="row">
+                <div class="column left" style="background-color: green; width: 25%">
+                    <h2><span style = "background-color:red;">Column 1</span></h2>
+                    <p>Some text..</p>
+                </div>
+                <div class="column middle" style="background-color:greenyellow; width: 50%">
+                    <h2 style = "text-align:center;">Column 2</h2>
+                    <h1 style="font-size: 50px; text-align:center;">Some text..</h1>
+                    <h1 style="font-size: 30px; text-align:center;">Some text..</h1>
+                    <h1 style="font-size: 10px; text-align:center;">Some text..</h1>
+                </div>
+                <div class="column right" style = "background-color: gold; width: 25%">
+                    <h3 style = "text-align: right">Column 3</h3>
+                    <p style = "text-align: right;">this is an interesting paragraph</p>
+                </div>
+                <p>This is a link to another website with photo --> <a href = "page2.html">GO TO PAGE 2</a></p>
+                <p>This is a link to another website with video --> <a href = "page3.html">GO TO PAGE 3</a></p>
+            </div>
+
+            <div class = "loader-wrapper">
+                <span class="loader"><span class = "loader-inner"></span></span>
+            </div>
+
+            <script>
+                $(window).on("load", function(){
+                    $(".loader-wrapper").fadeOut("slow");
+                });
+            </script>
+    </body>
+</html>
